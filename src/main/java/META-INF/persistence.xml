@@ -5,6 +5,7 @@
 	<persistence-unit name="playground">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<jta-data-source>java:jboss/postgresDS</jta-data-source>
+		<!-- comment -->
 		<!-- Annotated Entity-Class -->
 		<class>org.jboss.own.test.AppUser</class>
 		<properties>
