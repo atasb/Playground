@@ -6,6 +6,9 @@ import javax.persistence.PersistenceContext;
 
 public class Resources {
 
+    public Resources() {
+    }
+
     @Produces
     @PersistenceContext
     private EntityManager em;

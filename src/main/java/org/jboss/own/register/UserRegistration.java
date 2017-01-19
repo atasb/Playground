@@ -9,6 +9,9 @@ import org.jboss.own.test.AppUser;
 @Stateless
 public class UserRegistration {
 
+    public UserRegistration() {
+    }
+
     @Inject
     private EntityManager em;
 

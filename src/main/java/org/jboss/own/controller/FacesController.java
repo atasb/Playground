@@ -13,6 +13,10 @@ import org.jboss.own.test.AppUser;
 @Named("controller")
 public class FacesController {
 
+    public FacesController() {
+
+    }
+
     @Inject
     private UserRegistration register;
 
