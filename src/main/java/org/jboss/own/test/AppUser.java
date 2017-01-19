@@ -1,10 +1,8 @@
 /*******************************************************************************
  * Copyright (c) 2017 This is my Application, dont us it without my permission
- * Creator and Projekt-Lead
- * Barico
+ * Creator and Projekt-Lead Barico
  *
- * Contributors:
- *     PRODYNA AG - All rights reserved
+ * Contributors: PRODYNA AG - All rights reserved
  *******************************************************************************/
 package org.jboss.own.test;
 
@@ -29,7 +27,8 @@ public class AppUser {
     private String name;
 
     @NotNull(message = "Wert wird benötigt")
-    @Pattern(regexp = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$", message = "Das ist keine gültige Email-Adresse")
+    @Pattern(regexp = "^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\\.[a-zA-Z0-9-.]+$",
+            message = "Das ist keine gültige Email-Adresse")
     private String email;
 
     public AppUser() {
@@ -37,7 +36,7 @@ public class AppUser {
     }
 
     public AppUser(final String name) {
-        setName(name);
+        this.name = name;
     }
 
     public String getName() {
