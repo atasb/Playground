@@ -1,3 +1,11 @@
+/*******************************************************************************
+ * Copyright (c) 2017 This is my Application, dont us it without my permission
+ * Creator and Projekt-Lead
+ * Barico
+ *
+ * Contributors:
+ *     PRODYNA AG - All rights reserved
+ *******************************************************************************/
 package org.jboss.own.controller;
 
 import javax.annotation.PostConstruct;
@@ -9,12 +17,15 @@ import javax.inject.Named;
 import org.jboss.own.register.UserRegistration;
 import org.jboss.own.test.AppUser;
 
+/**
+ * @author batas
+ *
+ */
 @Model
 @Named("controller")
 public class FacesController {
 
     public FacesController() {
-
     }
 
     @Inject
