@@ -23,12 +23,10 @@
 					<h:commandButton value="Submit" />
 				</p:panelGrid>
 			</p:panel>
-
 			<p:panel header="Registration">
 				<p:panelGrid columns="1">
 					<p:outputLabel value="#{newUser.name}" />
 					<p:outputLabel value="#{newUser.email}" />
-
 					<f:facet name="footer">
 						<h:commandButton value="Registriere"
 							actionListener="#{controller.register}" />
