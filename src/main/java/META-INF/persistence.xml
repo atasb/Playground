@@ -6,7 +6,6 @@
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<jta-data-source>java:jboss/postgresDS</jta-data-source>
 		<!-- Annotated Entity-Class -->
-		<!-- Annotated Entity-Class -->
 		<class>org.jboss.own.test.AppUser</class>
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
