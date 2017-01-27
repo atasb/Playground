@@ -36,7 +36,7 @@ public class UserRegistration implements Serializable {
     private EntityManager entityManager;
 
     @PostConstruct
-    private void initList() {
+    public void initList() {
         userRepo.fillDatabaseUserList();
     }
 

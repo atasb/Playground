@@ -33,9 +33,6 @@ public class UserRepository implements Serializable {
 
     public void fillDatabaseUserList() {
         dataBaseUserList = query.getDataBaseUser();
-        if (dataBaseUserList != null) {
-            System.out.println("nicht null");
-        }
     }
 
     public List<AppUser> getDataBaseUserList() {
@@ -44,5 +41,18 @@ public class UserRepository implements Serializable {
 
     public void setDataBaseUserList(final List<AppUser> dataBaseUserList) {
         this.dataBaseUserList = dataBaseUserList;
+    }
+
+    /**
+     * @param id
+     * @return
+     */
+    public AppUser findById(final long id) {
+        for (final AppUser user : dataBaseUserList) {
+            if (user.getId() == id) {
+                return user;
+            }
+        }
+        return null;
     }
 }

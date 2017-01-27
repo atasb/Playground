@@ -16,7 +16,6 @@ import javax.inject.Named;
 import org.jboss.own.model.AppUser;
 import org.jboss.own.model.LoginUser;
 import org.jboss.own.register.UserRegistration;
-import org.jboss.own.userrepo.UserRepository;
 
 /**
  * @author batas
@@ -28,9 +27,6 @@ public class FacesController {
 
     @Inject
     private UserRegistration register;
-
-    @Inject
-    private UserRepository userRepo;
 
     @Produces
     @Named
@@ -45,7 +41,7 @@ public class FacesController {
     }
 
     public String login() {
-        userRepo.fillDatabaseUserList();
+        register.initList();
         init();
         return "welcome?faces-redirect=true";
     }
