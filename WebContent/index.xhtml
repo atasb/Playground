@@ -9,9 +9,12 @@
 	<title>Playground</title>
 </h:head>
 <h:body>
+		<f:facet name="last">
+			<h:outputStylesheet name="css/style.css" />" />
+		</f:facet>
 		<h:form>
-			<p:panel header="User Login">
-				<p:panelGrid columns="3">
+			<p:panel header="Login" style="text-align:center">
+				<p:panelGrid columns="3" styleClass="panelGridCenter">
 					<p:outputLabel value="Name:" />
 					<p:inputText id="name" value="#{newUser.name}"
 						a:placeholder="What's your name?" required="true" />
@@ -20,12 +23,12 @@
 					<p:inputText id="email" value="#{newUser.email}"
 						a:placeholder="What's your phonenumber?" />
 					<p:message for="email" style="color:red" />
-					<h:commandButton value="Submit" />
+					<h:commandButton value="Submit"
+						action="#{controller.login()}" />
 				</p:panelGrid>
 			</p:panel>
-			<p:panel></p:panel>
-			<p:panel header="Registration">
-				<p:panelGrid columns="1">
+			<p:panel header="Registration" style="text-align:center">
+				<p:panelGrid columns="1" styleClass="panelGridCenter">
 					<p:outputLabel value="#{newUser.name}" />
 					<p:outputLabel value="#{newUser.email}" />
 					<f:facet name="footer">

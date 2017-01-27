@@ -6,7 +6,7 @@
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
 		<jta-data-source>java:jboss/postgresDS</jta-data-source>
 		<!-- Annotated Entity-Class -->
-		<class>org.jboss.own.test.AppUser</class>
+		<class>org.jboss.own.model.AppUser</class>
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect" />
 			<property name="hibernate.hbm2ddl.auto" value="update" />

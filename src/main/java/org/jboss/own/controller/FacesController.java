@@ -1,4 +1,5 @@
 /*******************************************************************************
+ *
  * Copyright (c) 2017 This is my Application, dont us it without my permission
  * Creator and Projekt-Lead Barico
  *
@@ -12,8 +13,10 @@ import javax.enterprise.inject.Produces;
 import javax.inject.Inject;
 import javax.inject.Named;
 
+import org.jboss.own.model.AppUser;
+import org.jboss.own.model.LoginUser;
 import org.jboss.own.register.UserRegistration;
-import org.jboss.own.test.AppUser;
+import org.jboss.own.userrepo.UserRepository;
 
 /**
  * @author batas
@@ -26,20 +29,35 @@ public class FacesController {
     @Inject
     private UserRegistration register;
 
+    @Inject
+    private UserRepository userRepo;
+
     @Produces
     @Named
     private AppUser newUser;
 
     @PostConstruct
     public void init() {
-        newUser = new AppUser();
+        newUser = new LoginUser();
     }
 
     public FacesController() {
     }
 
-    public void register() {
+    public String login() {
+        userRepo.fillDatabaseUserList();
+        init();
+        return "welcome?faces-redirect=true";
+    }
+
+    public String register() {
         register.register(newUser);
+        init();
+        return "welcome?faces-redirect=true";
+    }
+
+    public void submit() {
+
     }
 
 }
